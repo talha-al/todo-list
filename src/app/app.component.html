@@ -1,0 +1,33 @@
+<div class="container">
+  <div style="display: flex; flex-direction: row">
+    <input matInput type="text" [(ngModel)]="inputText" />
+    <button mat-raised-button color="primary" (click)="addValue()">Ekle</button>
+  </div>
+  <div *ngFor="let hedef of hedefler; index as index">
+    <div class="item">
+      <div *ngIf="!isEditMode">
+        {{ hedef }}
+      </div>
+      <div *ngIf="isEditMode">
+        <input matInput type="text" [(ngModel)]="inputText" />
+      </div>
+      <mat-icon (click)="deleteItem(index)"> delete </mat-icon>
+      <mat-icon (click)="editItem(index)"> edit </mat-icon>
+    </div>
+  </div>
+
+  <div *ngIf="silinenler.length">
+    <div>Silinenler</div>
+    <div *ngFor="let silinen of silinenler">
+      {{ silinen }}
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="true">
+  Test
+</div> -->
+
+<!-- <div *ngFor="let number of arrayDegisken" >
+  {{ number }}
+</div> -->
