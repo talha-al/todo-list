@@ -10,6 +10,22 @@ export class AppComponent {
   hedefler: string[] = [];
   silinenler: string[] = [];
   isEditMode = false;
+  sayi:string = "45";
+  parentHeader: string = "300";
+
+  readButtonEvent(event:string){
+    console.log(event);
+    
+  }
+
+  changeName() {
+    this.parentHeader += 1;
+  }
+
+  showMessage(event:any){
+    console.log(event)
+    // this.parentHeader = event.toString();
+  }
 
   addValue() {
     this.hedefler.push(this.inputText);

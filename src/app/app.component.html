@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div style="display: flex; flex-direction: row">
     <input matInput type="text" [(ngModel)]="inputText" />
     <button mat-raised-button color="primary" (click)="addValue()">Ekle</button>
@@ -22,7 +22,7 @@
       {{ silinen }}
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <div *ngIf="true">
   Test
@@ -31,3 +31,11 @@
 <!-- <div *ngFor="let number of arrayDegisken" >
   {{ number }}
 </div> -->
+
+<!-- <button mat-button color="primary" (click)="changeName()">Arttır</button> -->
+
+<app-home
+  [header]="sayi"
+  header2="99"
+  (buttonEvent)="readButtonEvent($event)"
+></app-home>
